@@ -1,0 +1,9 @@
+cc = g++
+
+jarvis: jarvis.o main.o
+	$(cc) -o jarvis jarvis.o main.o
+jarvis.o: jarvis.cpp main.cpp
+	$(cc) -c jarvis.cpp main.cpp
+
+clean:
+	rm -r jarvis jarvis.o main.o

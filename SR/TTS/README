@@ -1,0 +1,22 @@
+this is manual
+
+command				operation
+jarvis				tell yes master
+jarvis shutdown           	close jarvis
+jarvis left		  	tell left
+jaris right			tell right
+jarvis arm			tell my arm
+jarvis shoulder			tell my shoulder
+jarvis finger			tell my finer
+open internet			open chrome wep browser
+open command			open terminator
+open radio			open saycast radio
+open map			open googlemap
+open video			open youtube
+close jarvis			close jarvis
+close internet			close chrome
+close radio			close mplayer
+weather today			inform today's weather
+location history		show google's location history
+
+
