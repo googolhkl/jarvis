@@ -237,6 +237,14 @@ static int
 		system("mplayer ~/음악/interface/effect56.mp3");
 		return 0;
 	}
+	else if(mystring.find("close command") !=string::npos)
+	{
+		system("killall terminator");
+		jarvis.Write("closed command line");
+		jarvis.Tts();
+		system("mplayer ~/음악/interface/effect56.mp3");
+		return 0;
+	}
 
 	break;
 	}
