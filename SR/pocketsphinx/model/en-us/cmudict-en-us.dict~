@@ -9,16 +9,19 @@ down D AW N
 down(2) D  AA W N
 down(3) D AW N D
 down(4) D OW N
-arm AA R M
-arm(1) AA M
-arm(2) AH R M
+turn T ER N
 left L EH F T
 left(4) R EH F T
 right R AY T
-shoulder SH OW L D ER 
 close K L OW S
 close(2) K L OW Z
 finger F IH NG G ER
+wrist R IH S T
+elbow EH L B OW
+shoulder SH OW L D ER 
+arm AA R M
+arm(1) AA M
+arm(2) AH R M
 stop S T AA P
 stop(1) S T OW P
 stop(2) S T AO P 
@@ -38,5 +41,4 @@ history(2) HH IH S T R IY
 today T AH D EY
 today(2) T UW D EY
 video V IH D IY OW
-terminal T ER M AH N AH L
-terminator T ER M AH N EY T ER
+command K AH M AE N D

@@ -40,9 +40,9 @@ static int
 		in_speech = ps_get_in_speech(ps);
 		if (in_speech && !utt_started) {
 		    utt_started = TRUE;
-		    printf("듣는중...\n");
+		    //printf("듣는중...\n");
 		}
-		printf("\n");
+		//printf("\n");
 
 		if (!in_speech && utt_started) {//////////////////////////////////////////////////////////////
 
@@ -100,15 +100,73 @@ static int
 	return 0;
 	}
 
-	else if(mystring.find("jarvis left") !=string::npos)
+	else if(mystring.find("close finger") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect56.mp3");
+	jarvis.Write("finger close");
+	jarvis.Tts();
+	return 0;
+	}
+	else if(mystring.find("open finger") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect56.mp3");
+	jarvis.Write("finger open");
+	jarvis.Tts();
+	return 0;
+	}
+	else if(mystring.find("down wrist") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("wrist down!");
+	jarvis.Tts();
+	return 0;
+	}
+
+	else if(mystring.find("up wrist") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("wrist up!");
+	jarvis.Tts();
+	return 0;
+	}
+
+	else if(mystring.find("down elbow") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("elbow down");
+	jarvis.Tts();
+	return 0;
+	}
+	else if(mystring.find("up elbow") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("elbow up");
+	jarvis.Tts();
+	return 0;
+	}
+	else if(mystring.find("down shoulder") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("shulder down");
+	jarvis.Tts();
+	return 0;
+	}
+	else if(mystring.find("up shoulder") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("shoulder up");
+	jarvis.Tts();
+	return 0;
+	}
+
+	else if(mystring.find("left shoulder") !=string::npos)
 	{
 		//system("mplayer ~/음악/interface/effect19.mp3");
 	jarvis.Write("turn left!");
 	jarvis.Tts();
 	return 0;
 	}
-
-	else if(mystring.find("jarvis right") !=string::npos)
+	else if(mystring.find("right shoulder") !=string::npos)
 	{
 		//system("mplayer ~/음악/interface/effect19.mp3");
 	jarvis.Write("turn right!");
@@ -116,29 +174,6 @@ static int
 	return 0;
 	}
 
-	else if(mystring.find("jarvis arm") !=string::npos)
-	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
-	jarvis.Write("my arm!");
-	jarvis.Tts();
-	return 0;
-	}
-
-	else if(mystring.find("jarvis shoulder") !=string::npos)
-	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
-	jarvis.Write("my shoulder!");
-	jarvis.Tts();
-	return 0;
-	}
-
-	else if(mystring.find("jarvis finger") !=string::npos)
-	{
-		//system("mplayer ~/음악/interface/effect56.mp3");
-	jarvis.Write("my finger!");
-	jarvis.Tts();
-	return 0;
-	}
 
 	
 /*			OPEN COMMAND					*/
@@ -253,7 +288,7 @@ static int
 		    if (ps_start_utt(ps) < 0)
 		        E_FATAL("Failed to start utterance\n");
 		    utt_started = FALSE;
-		    cout<<"깨어 났습니다"<<endl<<"명령을 내려주세요"<<endl;
+		    //cout<<"깨어 났습니다"<<endl<<"명령을 내려주세요"<<endl;
 		
 
 	count++;

@@ -8,4 +8,4 @@ mplayer ~/음악/interface/effect31.mp3
  mplayer "http://translate.google.com/translate_tts?tl=en&q=ok, please tell me command!"
 mplayer ~/음악/interface/effect2.mp3
 
-~/jarvis/sr/TTS/jarvis -inmic yes
+~/jarvis/SR/TTS/jarvis -inmic yes
