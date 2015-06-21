@@ -3,11 +3,18 @@ this is manual
 command				operation
 jarvis				tell yes master
 jarvis shutdown           	close jarvis
-jarvis left		  	tell left
-jaris right			tell right
-jarvis arm			tell my arm
-jarvis shoulder			tell my shoulder
-jarvis finger			tell my finer
+jarvis down			down total robot arm
+jarvis up			up total robot arm
+shoulder left			left robot shoulder
+shoulder right			right robot shoulder
+shoulder down			down robot shoulder
+shoulder up			up robot shoulder
+elbow down			down robot elbow
+elbow up			up robot elbow
+wrist down			down robot wrist
+wrist up			up robot wrist
+finger close			close robot finger
+finger open			open robot finger
 open internet			open chrome wep browser
 open command			open terminator
 open radio			open saycast radio
@@ -16,6 +23,7 @@ open video			open youtube
 close jarvis			close jarvis
 close internet			close chrome
 close radio			close mplayer
+close command			close terminator
 weather today			inform today's weather
 location history		show google's location history
 
