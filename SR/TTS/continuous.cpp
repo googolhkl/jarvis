@@ -1,6 +1,7 @@
 //NEW
 #include"stt.h"
 #include"jarvis.h"
+#include"arduino_serial.h"
 #include<cstdlib>
 
 static const arg_t cont_args_def[] = {

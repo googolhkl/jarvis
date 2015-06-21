@@ -7,20 +7,6 @@ int main(int argc, char *argv[])
 {
 	int i;
 	
-	/*
-	for( i=0;i<argc;i++)
-	{
-		cout<<argc<<endl;
-		cout<<argv[i]<<endl;
-	}
-
-	char * array[i];
-	for( i=0;i<argc;i++)
-	{
-		array[i]=argv[i];
-	}
-	arm(argc,array);
-	*/
 	char * array[9];
 	cout<<"Light=";
 	char str[10];
@@ -29,7 +15,7 @@ int main(int argc, char *argv[])
 	array[1]="-b";
 	array[2]="9800";
 	array[3]="-p";
-	array[4]="/dev/ttyACM0";
+	array[4]="/dev/ttyACM1";
 	array[5]="-d";
 	array[6]="1500";
 	array[7]="-s";

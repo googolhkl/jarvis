@@ -1,4 +1,5 @@
 #include"arduino_serial.h"
+#include<iostream>
 using namespace std;
 
 void usage(void) {
@@ -124,6 +125,7 @@ int serialport_init(const char* serialport, int baud)
 
     return fd;
 }
+
 
 int arm(int argc, char *argv[]) 
 {

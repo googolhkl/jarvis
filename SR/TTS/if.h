@@ -83,6 +83,15 @@ static int
 		}
 		*/
 
+/*         Arduino Serial communication               */
+	char * array[4];
+	char str[10];
+	array[0]="9800";
+	array[1]="/dev/ttyACM0";
+	array[2]="150";
+	//array[3]=str;
+	//arm(4,array);
+
 /*			JARVIS COMMAND					*/
 	if(mystring.find("jarvis shutdown") !=string::npos)
 	{
@@ -100,80 +109,84 @@ static int
 	return 0;
 	}
 
-	else if(mystring.find("close finger") !=string::npos)
+	else if(mystring.find("finger close") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect56.mp3");
 	jarvis.Write("finger close");
 	jarvis.Tts();
 	return 0;
 	}
-	else if(mystring.find("open finger") !=string::npos)
+	else if(mystring.find("finger open") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect56.mp3");
 	jarvis.Write("finger open");
 	jarvis.Tts();
 	return 0;
 	}
-	else if(mystring.find("down wrist") !=string::npos)
+	else if(mystring.find("wrist down") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
 	jarvis.Write("wrist down!");
 	jarvis.Tts();
 	return 0;
 	}
 
-	else if(mystring.find("up wrist") !=string::npos)
+	else if(mystring.find("wrist up") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
 	jarvis.Write("wrist up!");
 	jarvis.Tts();
 	return 0;
 	}
 
-	else if(mystring.find("down elbow") !=string::npos)
+	else if(mystring.find("elbow down") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
 	jarvis.Write("elbow down");
 	jarvis.Tts();
 	return 0;
 	}
-	else if(mystring.find("up elbow") !=string::npos)
+	else if(mystring.find("elbow up") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
 	jarvis.Write("elbow up");
 	jarvis.Tts();
 	return 0;
 	}
-	else if(mystring.find("down shoulder") !=string::npos)
+	else if(mystring.find("shoulder down") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
-	jarvis.Write("shulder down");
-	jarvis.Tts();
+		array[3]="3";
+		arm(4,array);
 	return 0;
 	}
-	else if(mystring.find("up shoulder") !=string::npos)
+	else if(mystring.find("shoulder up") !=string::npos)
 	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
-	jarvis.Write("shoulder up");
-	jarvis.Tts();
-	return 0;
-	}
-
-	else if(mystring.find("left shoulder") !=string::npos)
-	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
-	jarvis.Write("turn left!");
-	jarvis.Tts();
-	return 0;
-	}
-	else if(mystring.find("right shoulder") !=string::npos)
-	{
-		//system("mplayer ~/음악/interface/effect19.mp3");
-	jarvis.Write("turn right!");
-	jarvis.Tts();
+		array[3]="2";
+		arm(4,array);
 	return 0;
 	}
 
+	else if(mystring.find("shoulder left") !=string::npos)
+	{
+		array[3]="1";
+		arm(4,array);
+	return 0;
+	}
+	else if(mystring.find("shoulder right") !=string::npos)
+	{
+		array[3]="0";
+		arm(4,array);
+	return 0;
+	}
+
+	else if(mystring.find("jarvis up") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("total up!");
+	jarvis.Tts();
+	return 0;
+	}
+	else if(mystring.find("jarvis down") !=string::npos)
+	{
+		//system("mplayer ~/음악/interface/effect19.mp3");
+	jarvis.Write("total down!");
+	jarvis.Tts();
+	return 0;
+	}
 
 	
 /*			OPEN COMMAND					*/
