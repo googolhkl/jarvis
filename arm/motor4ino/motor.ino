@@ -110,15 +110,18 @@ void loop()
     wrist.SetMotor(false);
     motor_select=0;
   }
-  else if(motor5_f==motor_select==motor_select)
+  else if(motor5_f==motor_select)
   {
     finger.SetMotor(true);
     motor_select=0;
   }
-  else
+  else if(motor5_r==motor_select)
   {
     finger.SetMotor(false);
     motor_select=0;
+  }
+  else
+  {
   }
 
 
