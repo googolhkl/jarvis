@@ -111,18 +111,24 @@ static int
 
 	else if(mystring.find("finger close") !=string::npos)
 	{
+		array[3]="9";
+		arm(4,array);
 	jarvis.Write("finger close");
 	jarvis.Tts();
 	return 0;
 	}
 	else if(mystring.find("finger open") !=string::npos)
 	{
+		array[3]="8";
+		arm(4,array);
 	jarvis.Write("finger open");
 	jarvis.Tts();
 	return 0;
 	}
 	else if(mystring.find("wrist down") !=string::npos)
 	{
+		array[3]="7";
+		arm(4,array);
 	jarvis.Write("wrist down!");
 	jarvis.Tts();
 	return 0;
@@ -130,19 +136,25 @@ static int
 
 	else if(mystring.find("wrist up") !=string::npos)
 	{
+		array[3]="6";
+		arm(4,array);
 	jarvis.Write("wrist up!");
 	jarvis.Tts();
 	return 0;
 	}
 
-	else if(mystring.find("elbow down") !=string::npos)
+	else if((mystring.find("elbow down") !=string::npos) || (mystring.find("video down") !=string::npos))
 	{
+		array[3]="4";
+		arm(4,array);
 	jarvis.Write("elbow down");
 	jarvis.Tts();
 	return 0;
 	}
-	else if(mystring.find("elbow up") !=string::npos)
+	else if((mystring.find("elbow up") !=string::npos) || (mystring.find("video up") !=string::npos))
 	{
+		array[3]="5";
+		arm(4,array);
 	jarvis.Write("elbow up");
 	jarvis.Tts();
 	return 0;
@@ -189,7 +201,7 @@ static int
 	}
 
 	
-/*			OPEN COMMAND					*/
+								/*			OPEN COMMAND					*/
 	else if(mystring.find("open command") !=string::npos)
 	{
 		//system("mplayer ~/음악/interface/effect60.mp3");
