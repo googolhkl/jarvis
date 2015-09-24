@@ -513,9 +513,9 @@ string fridayWeather(int seltime,string &weatherInfo_1,string &weatherInfo0,stri
 	string mystring_1;
 	string mystring0="Its "+ intToString(MIN)+" past "+intToString(timeto12);
 	string mystring1="Current temperature is "+weatherInfo(0) +" degrees Celsius";
-	string mystring2="and";
+	string mystring2="and ";
 	string mystring3="Daytime Maximum temperature is "+weatherInfo(1)+" degrees Celsius";
-	string mystring4="and";
+	string mystring4="and ";
 	string mystring5="Daytime Minimum temperature is "+weatherInfo(2)+" degrees Celsius";
 	string mystring6="Sky weather is "+weatherInfo(5);
 	string mystring7="rainfall probability is "+weatherInfo(6)+"%.";
@@ -632,8 +632,6 @@ int time12(int num)
 {
 	switch(num)
 	{
-		case 0:
-			return 0;
 		case 13:
 			return 1;
 		case 14:
@@ -659,9 +657,4 @@ int time12(int num)
 		case 24:
 			return 0;
 	}
-	return num;
 }
-
-
-
-
