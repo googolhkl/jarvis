@@ -41,5 +41,6 @@
 			myString.insert(pos1,replaceString);
 			system(myString.c_str());
       system("aplay test.wav");
+      system("rm test.wav");
 
 		}
